@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rain & Rinse PDP Mockups</title>
+<link rel="stylesheet" href="assets/fonts.css">
+<style>
+  /* Review shell. Sits outside the customer-facing pages. */
+  :root { --bar: #1b1b1b; --tan: #FFF7F2; --yellow: #FCCE00; --dim: rgba(255,247,242,.6); --line: rgba(255,247,242,.16); }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body { display: flex; flex-direction: column; background: #2a2a2a; color: var(--tan); font: 500 14px/1.4 'Athletics', system-ui, sans-serif; }
+  button, a { font: inherit; color: inherit; }
+  .bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 10px 14px; background: var(--bar); border-bottom: 1px solid var(--line); }
+  .bar__t { font-family: 'Sproos Sans', system-ui, sans-serif; font-size: 16px; margin-right: auto; }
+  .bar__t span { color: var(--dim); font-family: 'Athletics', system-ui, sans-serif; font-size: 13px; margin-left: 8px; }
+  .seg { display: inline-flex; padding: 3px; border-radius: 999px; background: rgba(255,247,242,.08); gap: 2px; }
+  .seg button { border: 0; background: none; border-radius: 999px; padding: 8px 14px; cursor: pointer; white-space: nowrap; }
+  .seg button[aria-pressed="true"] { background: var(--yellow); color: #000; }
+  .seg small { color: var(--dim); margin-left: 6px; }
+  .seg button[aria-pressed="true"] small { color: rgba(0,0,0,.6); }
+  .ghost { border: 1px solid var(--line); background: none; border-radius: 999px; padding: 8px 14px; cursor: pointer; text-decoration: none; }
+  .stage { flex: 1; min-height: 0; display: flex; justify-content: center; overflow: auto; padding: 0; }
+  .stage iframe { border: 0; background: #fff; width: 100%; height: 100%; display: block; }
+  .stage.is-phone { padding: 18px; }
+  .stage.is-phone iframe { width: 390px; height: min(844px, 100%); border-radius: 28px; box-shadow: 0 0 0 10px #111, 0 20px 60px rgba(0,0,0,.5); }
+  .notes { position: fixed; top: 0; right: 0; bottom: 0; width: min(440px, 100%); background: var(--bar); border-left: 1px solid var(--line); padding: 22px 22px 40px; overflow: auto; transform: translateX(100%); transition: transform .25s; z-index: 10; }
+  .notes.is-on { transform: none; }
+  .notes h2 { font-family: 'Sproos Sans', system-ui, sans-serif; font-weight: 400; font-size: 22px; margin: 0 0 6px; }
+  .notes h3 { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--yellow); margin: 22px 0 8px; }
+  .notes ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+  .notes p { margin: 0; color: var(--dim); }
+  .notes code { background: rgba(255,247,242,.1); padding: 1px 5px; border-radius: 3px; }
+  .notes__x { position: absolute; top: 14px; right: 14px; }
+  .dir-note { color: var(--dim); font-size: 13px; padding: 0 14px 10px; background: var(--bar); margin: 0; }
+  @media (max-width: 720px) { .seg small, .bar__t span { display: none; } .hide-sm { display: none; } }
+</style>
+</head>
+<body>
+  <div class="bar">
+    <div class="bar__t">Rain & Rinse PDP <span>Round 1 mockups · internal review</span></div>
+    <div class="seg" role="group" aria-label="Direction">
+      <button data-d="1" aria-pressed="true">D1<small>Two sides</small></button>
+      <button data-d="2" aria-pressed="false">D2<small>Spa upgrade</small></button>
+      <button data-d="3" aria-pressed="false">D3<small>1 vs 2</small></button>
+    </div>
+    <div class="seg hide-sm" role="group" aria-label="Viewport">
+      <button data-v="full" aria-pressed="true">Full width</button>
+      <button data-v="phone" aria-pressed="false">Phone</button>
+    </div>
+    <button class="ghost" id="notes-btn">Review notes</button>
+    <a class="ghost hide-sm" id="open" href="direction-1.html" target="_blank" rel="noopener">Open page ↗</a>
+  </div>
+  <p class="dir-note" id="dir-note"></p>
+  <div class="stage" id="stage"><iframe id="frame" title="Rain & Rinse PDP mockup" src="direction-1.html"></iframe></div>
+
+  <aside class="notes" id="notes" aria-label="Review notes">
+    <button class="ghost notes__x" id="notes-x">Close</button>
+    <h2>Review notes</h2>
+    <p>Rough creative prototypes for comparing story, layout and path to purchase. Not production Shopify pages.</p>
+
+    <h3>Unconfirmed commercial details</h3>
+    <ul>
+      <li>$249 with filter subscription, $299 one-time.</li>
+      <li>Replacement filter $33 every 90 days.</li>
+      <li>Colors: Lilac, Moonlight, Black.</li>
+      <li>All of the above live in <code>assets/config.js</code>. Edit once, all three pages update.</li>
+    </ul>
+
+    <h3>Carried over from the Filtered Shower Kit PDP</h3>
+    <ul>
+      <li>4.9 stars, 50,000+ customers, Free Shipping, 60 Day Free Returns, 5 Year Warranty, and the free-shipping-over-$99 bar. Kept by request. Confirm they apply to Rain & Rinse before launch.</li>
+      <li>The shipping and returns FAQ answer uses the same terms.</li>
+    </ul>
+
+    <h3>Missing assets</h3>
+    <ul>
+      <li>All photography and video. Striped boxes are labeled with the intended shot.</li>
+      <li>Accurate filter location diagram (D1, D2). D3 uses a simple water-path schematic as a stand-in.</li>
+      <li>Diverter and control close-ups, included-components flat lay.</li>
+      <li>Matched before/after pair in the everyday bathroom (D1, D2, D3 lead).</li>
+    </ul>
+
+    <h3>Placeholders to fill</h3>
+    <ul>
+      <li>Compatibility and fit details.</li>
+      <li>Final packing list, including whether a cartridge ships in the box.</li>
+      <li>Approved filtration claims.</li>
+      <li>Subscription billing, skip and cancel terms.</li>
+      <li>Install guide link.</li>
+      <li>Proof slots: genuine Rain & Rinse review or filtration evidence.</li>
+    </ul>
+
+    <h3>Styling</h3>
+    <ul>
+      <li>Logo, fonts and colors pulled from the install-guide build to match sproos.co. Layout is provisional, not the live theme.</li>
+      <li>The brief references a Brand Narrative and Messaging doc we didn't have; voice drawn from the Round 1 Brand Refresh deck and sproos.co.</li>
+    </ul>
+
+    <h3>Copy added for layout (not in the brief)</h3>
+    <ul>
+      <li>Image tags: Before / After, Spa day / Sand day, First / Then.</li>
+      <li>D1: “One diverter. Three ways to shower.”</li>
+      <li>D2 details rows: “One filter, both heads.” “Tools in the box.”</li>
+      <li>FAQ header: “Questions? Answered.” Price shown on the Add to cart button.</li>
+    </ul>
+
+    <h3>Left out on purpose</h3>
+    <ul>
+      <li>Accessory upsell, comparison table and materials block from the current PDP. Easy to add back if the team wants them.</li>
+      <li>Checkout. Add to cart is local feedback only.</li>
+    </ul>
+  </aside>
+
+<script>
+  var D = {
+    1: { f: 'direction-1.html', n: 'D1 · Two sides of your shower. Recommended main PDP. Balanced spa and functional routines.' },
+    2: { f: 'direction-2.html', n: 'D2 · The spa upgrade for your actual bathroom. Aspiration first, then attainable transformation.' },
+    3: { f: 'direction-3.html', n: 'D3 · See what a second head adds. Test page for literal 1 vs 2 ad traffic.' }
+  };
+  var frame = document.getElementById('frame'), open = document.getElementById('open'), note = document.getElementById('dir-note');
+  function go(d) {
+    if (!D[d]) d = 1;
+    frame.src = D[d].f; open.href = D[d].f; note.textContent = D[d].n;
+    document.querySelectorAll('[data-d]').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.d == d); });
+    history.replaceState(null, '', '#d' + d);
+  }
+  document.querySelectorAll('[data-d]').forEach(function (b) { b.onclick = function () { go(b.dataset.d); }; });
+  document.querySelectorAll('[data-v]').forEach(function (b) {
+    b.onclick = function () {
+      document.querySelectorAll('[data-v]').forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+      document.getElementById('stage').classList.toggle('is-phone', b.dataset.v === 'phone');
+    };
+  });
+  var notes = document.getElementById('notes');
+  document.getElementById('notes-btn').onclick = function () { notes.classList.toggle('is-on'); };
+  document.getElementById('notes-x').onclick = function () { notes.classList.remove('is-on'); };
+  go((location.hash.match(/d(\d)/) || [])[1] || 1);
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rain & Rinse | sproos!</title>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/pdp.css">
+<style>
+  /* Direction 2: The spa upgrade for your actual bathroom */
+  .tx { display: grid; gap: 14px; }
+  @media (min-width: 900px) { .tx { grid-template-columns: 1.55fr 1fr; gap: 20px; align-items: stretch; } .tx > .ph { aspect-ratio: auto; height: 100%; } }
+  .tx__hint { margin-top: 10px; }
+  .util-lead { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .util-lead .ph { --ar: 3 / 4; }
+  @media (min-width: 760px) { .util-lead { gap: 20px; } .util-lead .ph { --ar: 4 / 5; } }
+  .util-more { display: grid; gap: 28px; margin-top: 36px; }
+  @media (min-width: 760px) { .util-more { grid-template-columns: 1fr 1fr; gap: 24px; } }
+  .mini-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .mini-pair .ph { --ar: 1 / 1; }
+  .mini-pair p { font-family: var(--f-punch); font-size: 17px; margin-top: 8px; }
+  .seq {
+    display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 14px;
+    overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px;
+    margin-inline: calc(var(--gut) * -1); padding-inline: var(--gut); scroll-padding-inline: var(--gut);
+  }
+  .seq > * { scroll-snap-align: start; }
+  @media (min-width: 900px) { .seq { grid-auto-flow: row; grid-template-columns: repeat(4, 1fr); margin-inline: 0; padding-inline: 0; overflow: visible; } }
+  .seq__n { font-family: var(--f-punch); font-size: 15px; display: inline-block; padding: 3px 10px; border-radius: 999px; background: var(--black); color: var(--tan); margin-top: 14px; }
+  .seq__l { font-family: var(--f-punch); font-size: 21px; margin-top: 8px; line-height: 1.15; }
+  .det { display: grid; gap: 0; border-top: 1.5px solid var(--black); }
+  .det__row { display: grid; grid-template-columns: 96px 1fr; gap: 18px; padding: 22px 0; border-bottom: 1px solid var(--line-2); align-items: start; }
+  @media (min-width: 760px) { .det__row { grid-template-columns: 160px 1fr; gap: 28px; } }
+  .det__row h3 { font-family: var(--f-punch); font-weight: 400; font-size: 21px; margin-bottom: 6px; }
+  .d2-close { display: grid; gap: 24px; justify-items: start; margin-top: 56px; }
+  @media (min-width: 900px) { .d2-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 64px; align-items: start; } .d2-grid .sec__head { position: sticky; top: 100px; } }
+</style>
+<script src="assets/config.js"></script>
+<script src="assets/brand.js"></script>
+<script>
+  window.RR_PAGE = {
+    kicker: ['Big shower energy.', '<em>No tile shopping required.</em>'],
+    description: 'Bring the full-body rain shower home, with a handheld for the everyday stuff and filtered water through both.',
+    galleryRail: true,
+    gallery: [
+      { shot: 'Lead: immersive spa moment under the rain, complete product visible. Expressive, lived-in bathroom', ar: '45' },
+      { shot: 'Complete Rain & Rinse system, clean product shot', ar: '45' },
+      { shot: 'Hand shower in use, everyday moment', ar: '45' },
+      { shot: 'Both heads running (Bliss Mode)', ar: '45' },
+      { shot: 'Close-up of diverter controls and filter', ar: '45' },
+      { shot: 'Full product and included components', ar: '45' }
+    ]
+  };
+</script>
+<script src="assets/pdp.js" defer></script>
+</head>
+<body>
+<div data-slot="header"></div>
+
+<main>
+  <!-- 1. Product and purchase -->
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#">Home</a> / <a href="#">Shower Kits</a> / Rain & Rinse</nav>
+    <div class="pdp" data-slot="pdp"></div>
+  </div>
+
+  <!-- 2. Transformation -->
+  <section class="sec sec--white" aria-labelledby="d2-s2">
+    <div class="wrap">
+      <div class="sec__head sec__head--split">
+        <h2 class="h2" id="d2-s2"><span>Your bathroom.</span><span><em>With better plans.</em></span></h2>
+        <p class="lede">The tile can stay. The basic shower can go. Rain & Rinse brings the rain shower you want and the flexibility you’ll use every day.</p>
+      </div>
+      <div class="tx">
+        <div>
+          <div class="ba">
+            <div class="ph ph--neutral" data-shot="Before: ordinary bathroom with basic fixed showerhead"><span class="ph__tag">Before</span></div>
+            <div class="ph ba__after" data-shot="After: same frame, Rain & Rinse installed"><span class="ph__tag ph__tag--r">Unbasic’d</span></div>
+            <span class="ba__line"></span><span class="ba__knob" aria-hidden="true"></span>
+            <input type="range" min="0" max="100" value="50" aria-label="Compare before and after">
+          </div>
+          <p class="small tx__hint">Drag to compare. Same bathroom, same light, same framing.</p>
+        </div>
+        <div class="ph ph--45" data-shot="Same bathroom: person relaxing under the rain"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Practical utility -->
+  <section class="sec sec--peach" aria-labelledby="d2-s3">
+    <div class="wrap">
+      <div class="sec__head">
+        <h2 class="h2" id="d2-s3"><span>Spa day.</span><span><em>Sand-between-your-toes day.</em></span></h2>
+        <p class="lede">Some showers are for switching off. Some are for washing the day off. This one has both covered.</p>
+      </div>
+      <div class="util-lead">
+        <div class="ph ph--neutral" data-shot="Rain relaxation, eyes closed"><span class="ph__tag">Spa day</span></div>
+        <div class="ph ph--neutral" data-shot="Handheld rinsing sandy feet"><span class="ph__tag">Sand day</span></div>
+      </div>
+      <div class="util-more">
+        <div class="mini-pair">
+          <div><div class="ph ph--neutral" data-shot="Slow hair wash under rain"></div><p>Wash-day shower.</p></div>
+          <div><div class="ph ph--neutral" data-shot="Handheld body rinse, hair stays dry"></div><p>Keep-my-hair-dry shower.</p></div>
+        </div>
+        <div class="mini-pair">
+          <div><div class="ph ph--neutral" data-shot="Both heads, unhurried everything shower"></div><p>Everything shower.</p></div>
+          <div><div class="ph ph--neutral" data-shot="Quick post-workout handheld rinse"></div><p>Out-the-door shower.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Personal control -->
+  <section class="sec" aria-labelledby="d2-s4">
+    <div class="wrap">
+      <div class="sec__head sec__head--split">
+        <h2 class="h2" id="d2-s4">Find your kind of <em>ahhh.</em></h2>
+        <p class="lede">Choose your head. Switch your spray. Adjust the height and angle. Make the shower fit the moment.</p>
+      </div>
+      <div class="seq" role="list">
+        <div role="listitem"><div class="ph ph--34" data-shot="Overhead switching between Rain and Cloudburst"></div><span class="seq__n">01</span><p class="seq__l">Rain or Cloudburst overhead</p></div>
+        <div role="listitem"><div class="ph ph--34" data-shot="Hand shower cycling sprays, thumb on pause"></div><span class="seq__n">02</span><p class="seq__l">Three handheld sprays + pause</p></div>
+        <div role="listitem"><div class="ph ph--34" data-shot="Hand turning the diverter"></div><span class="seq__n">03</span><p class="seq__l">Rain, handheld, or both</p></div>
+        <div role="listitem"><div class="ph ph--34" data-shot="Adjusting overhead height and angle, pivoting the handheld holder"></div><span class="seq__n">04</span><p class="seq__l">Adjustable height and angle</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Details and close -->
+  <section class="sec sec--lilac" aria-labelledby="d2-s5">
+    <div class="wrap d2-grid">
+      <div class="sec__head">
+        <h2 class="h2" id="d2-s5"><span>Good looks.</span><span><em>Thought-through details.</em></span></h2>
+        <p class="lede">Filtration through both heads. A handheld that goes where you need it. Installation tools in the box. The details make the difference.</p>
+      </div>
+      <div>
+        <div class="det">
+          <div class="det__row">
+            <div class="ph ph--sq" data-kind="Detail" data-shot="Where the filter sits"></div>
+            <div><h3>One filter, both heads.</h3><p>Swap in a replacement every <span data-cfg="days">90</span> days. With a filter subscription, each replacement is <span data-cfg="filter">$33</span>.</p></div>
+          </div>
+          <div class="det__row">
+            <div class="ph ph--sq" data-kind="Detail" data-shot="Installation tools in the box"></div>
+            <div><h3>Tools in the box.</h3><p>Everything you need to install is included.</p><p style="margin-top:8px"><button class="tlink" data-goto="faq-fit">Check fit and installation</button></p></div>
+          </div>
+          <div class="det__row">
+            <div class="slot" style="aspect-ratio:1;display:grid;place-items:center;text-align:center;padding:8px"><b style="margin:0">Proof</b></div>
+            <div class="slot"><b>Proof slot</b>Genuine Rain & Rinse review or approved filtration evidence when available.</div>
+          </div>
+        </div>
+        <div class="d2-close">
+          <p class="display"><em>Unbasic</em> your bathroom.</p>
+          <button class="btn" data-goto="buy">Choose your Rain & Rinse</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div data-slot="faq"></div>
+</main>
+
+<div data-slot="footer"></div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rain & Rinse | sproos!</title>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/pdp.css">
+<style>
+  /* Direction 3: See what a second head adds */
+  .one-two { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+  .one-two .ph { --ar: 4 / 7; border-radius: 0; }
+  @media (min-width: 900px) { .one-two .ph { border-radius: 4px; } }
+  .one-two .ph__tag { top: auto; bottom: 64px; }
+  .steps3 { display: grid; gap: 36px; counter-reset: s; }
+  @media (min-width: 760px) { .steps3 { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
+  .step3 .ph { --ar: 4 / 5; }
+  .step3__head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-top: 16px; }
+  .step3__head h3 { font-family: var(--f-display); font-weight: 400; font-size: 40px; line-height: 1; }
+  .step3 p { margin-top: 6px; }
+  .step3 .modes { margin-top: 14px; }
+  .payoff { display: grid; gap: 12px; position: relative; }
+  .payoff .ph { --ar: 4 / 5; }
+  .payoff__arrow { display: none; }
+  @media (min-width: 760px) {
+    .payoff { grid-template-columns: .8fr 1.2fr; gap: 20px; align-items: end; }
+    .payoff .ph:last-child { --ar: 1 / 1; }
+  }
+  .payoff .ph__tag { font-size: 14px; }
+  .fit { display: grid; gap: 28px; }
+  @media (min-width: 900px) { .fit { grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; } }
+  .fit__list { display: grid; gap: 0; border-top: 1.5px solid var(--black); }
+  .fit__list li { padding: 16px 0; border-bottom: 1px solid var(--line-2); display: grid; grid-template-columns: 34px 1fr; gap: 10px; }
+  .fit__list li span:first-child { font-family: var(--f-punch); font-size: 17px; }
+  .path { display: grid; gap: 32px; }
+  @media (min-width: 900px) { .path { grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; } }
+  .path svg { width: 100%; height: auto; }
+  .path__note { font-size: 12px; color: rgba(255,247,242,.6); margin-top: 10px; }
+  .d3-close { display: grid; gap: 24px; justify-items: center; text-align: center; padding-top: var(--sec); }
+</style>
+<script src="assets/config.js"></script>
+<script src="assets/brand.js"></script>
+<script>
+  window.RR_PAGE = {
+    kicker: ['2 is better than 1.', '<em>Here’s your shower proof.</em>'],
+    description: 'Full-body rain overhead. A handheld for the hard-to-reach stuff. Use either or both, with filtered water whichever way you go.',
+    galleryLead:
+      '<div class="one-two">' +
+        '<div class="ph ph--neutral" data-shot="Basic fixed showerhead. Same bathroom, light and framing as frame 2"><span class="ph__big">1</span></div>' +
+        '<div class="ph" data-shot="Rain & Rinse installed. Matched to frame 1"><span class="ph__big">2</span></div>' +
+      '</div>',
+    gallery: [
+      { shot: 'Lead: 1 vs 2 matched comparison', ar: 'sq' },
+      { shot: 'Clean full-system product photo, both heads visible', ar: 'sq' },
+      { shot: 'Overhead rain in use', ar: 'sq' },
+      { shot: 'Handheld in use', ar: 'sq' },
+      { shot: 'Close-up of diverter controls and filter', ar: 'sq' },
+      { shot: 'Full product and included components', ar: 'sq' }
+    ]
+  };
+</script>
+<script src="assets/pdp.js" defer></script>
+</head>
+<body>
+<div data-slot="header"></div>
+
+<main>
+  <!-- 1. Product and purchase (buy box first on desktop) -->
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#">Home</a> / <a href="#">Shower Kits</a> / Rain & Rinse</nav>
+    <div class="pdp pdp--flip" data-slot="pdp"></div>
+  </div>
+
+  <!-- 2. The added benefits -->
+  <section class="sec sec--yellow" aria-labelledby="d3-s2">
+    <div class="wrap">
+      <div class="sec__head">
+        <h2 class="h2" id="d3-s2"><span>One more head.</span><span><em>A lot more possibilities.</em></span></h2>
+      </div>
+      <ol class="steps3" style="padding:0;list-style:none;margin:0">
+        <li class="step3">
+          <div class="ph ph--neutral" data-shot="Overhead rain running, person under it"></div>
+          <div class="step3__head"><h3>Linger.</h3><span class="punch">01</span></div>
+          <p>Let the overhead rain cover you.</p>
+          <div class="modes" aria-hidden="true"><span class="mode-chip is-on"><i></i>Overhead</span><span class="mode-chip"><i></i>Handheld</span></div>
+        </li>
+        <li class="step3">
+          <div class="ph ph--neutral" data-shot="Handheld lifted from holder, aimed at a rinse"></div>
+          <div class="step3__head"><h3>Aim.</h3><span class="punch">02</span></div>
+          <p>Bring the handheld to the rinse.</p>
+          <div class="modes" aria-hidden="true"><span class="mode-chip"><i></i>Overhead</span><span class="mode-chip is-on"><i></i>Handheld</span></div>
+        </li>
+        <li class="step3">
+          <div class="ph ph--neutral" data-shot="Diverter turned to Bliss Mode, both heads running"></div>
+          <div class="step3__head"><h3>Both.</h3><span class="punch">03</span></div>
+          <p>Turn on Bliss Mode and use the two together.</p>
+          <div class="modes" aria-hidden="true"><span class="mode-chip is-on"><i></i>Overhead</span><span class="mode-chip is-on"><i></i>Handheld</span></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 3. The emotional payoff -->
+  <section class="sec sec--blue" aria-labelledby="d3-s3">
+    <div class="wrap">
+      <div class="sec__head sec__head--split">
+        <h2 class="h2" id="d3-s3"><span>Rinse the beach off.</span><span><em>Keep the holiday feeling.</em></span></h2>
+        <p class="lede">Get the sand out from between your toes. Then take your time under the rain.</p>
+      </div>
+      <div class="payoff">
+        <div class="ph ph--neutral" data-shot="Same person: handheld on sandy feet"><span class="ph__tag">First</span></div>
+        <div class="ph ph--neutral" data-shot="Same person: relaxing under the overhead rain"><span class="ph__tag">Then</span></div>
+      </div>
+      <p class="punch" style="font-size:22px;margin-top:28px">From the practical stuff to the just-for-you stuff.</p>
+    </div>
+  </section>
+
+  <!-- 4. Fit and installation -->
+  <section class="sec" aria-labelledby="d3-s4">
+    <div class="wrap fit">
+      <div class="ph ph--neutral ph--45" data-shot="Everyday bathroom: installing and adjusting the overhead arm and handheld holder"></div>
+      <div class="stack" style="gap:22px">
+        <h2 class="h2" id="d3-s4">A better fit for <em>your routine.</em></h2>
+        <p class="lede">Adjust the rain shower’s height and angle. Position the hand shower where it works for you. Give your everyday shower more ways to work.</p>
+        <ul class="fit__list">
+          <li><span>↕</span><span>Adjustable overhead height and angle</span></li>
+          <li><span>↻</span><span>Pivoting handheld holder</span></li>
+          <li><span>✓</span><span><strong>Installation tools included.</strong></span></li>
+        </ul>
+        <div class="slot"><b>Compatibility: to confirm</b>Verified fit details go here: supported shower arm and wall setups, and anything to check before ordering.</div>
+        <button class="tlink" data-goto="faq-fit" style="justify-self:start">Check fit and installation</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Filtration and close -->
+  <section class="sec sec--black on-dark" aria-labelledby="d3-s5">
+    <div class="wrap">
+      <div class="path">
+        <div class="stack" style="gap:22px">
+          <h2 class="h2" id="d3-s5"><span>Two heads.</span><span><em>One filtered system.</em></span></h2>
+          <p class="lede">Rain or handheld, your water passes through the shared filter before it reaches you.</p>
+          <p>Replacement filters are <span data-cfg="filter">$33</span> every <span data-cfg="days">90</span> days with a filter subscription.</p>
+        </div>
+        <div>
+          <svg viewBox="0 0 480 360" role="img" aria-label="Water path: water in, through the shared filter, to the diverter, then to the overhead rain shower, the hand shower, or both">
+            <g fill="none" stroke="#FFF7F2" stroke-width="2.5" stroke-linecap="round">
+              <path d="M90 60 H170"/><path d="M290 60 H330 V140"/>
+              <path d="M330 200 V250 H200 V290"/><path d="M330 200 V250 H420 V290"/>
+            </g>
+            <g font-family="Athletics, system-ui, sans-serif" font-size="15" font-weight="600" text-anchor="middle">
+              <rect x="10" y="36" width="80" height="48" rx="24" fill="none" stroke="#FFF7F2" stroke-width="2"/>
+              <text x="50" y="65" fill="#FFF7F2">Water</text>
+              <rect x="170" y="30" width="120" height="60" rx="6" fill="#C2ABFF"/>
+              <text x="230" y="65" fill="#000">Shared filter</text>
+              <rect x="270" y="140" width="120" height="60" rx="30" fill="#FCCE00"/>
+              <text x="330" y="175" fill="#000">Diverter</text>
+              <rect x="130" y="290" width="140" height="56" rx="6" fill="#FFF7F2"/>
+              <text x="200" y="323" fill="#000">Overhead rain</text>
+              <rect x="350" y="290" width="120" height="56" rx="6" fill="#FFF7F2"/>
+              <text x="410" y="323" fill="#000">Hand shower</text>
+            </g>
+          </svg>
+          <p class="path__note">Schematic only. Replace with an accurate product diagram showing the real filter location.</p>
+        </div>
+      </div>
+      <div class="d3-close">
+        <p class="display">Make room for <em>more shower.</em></p>
+        <button class="btn btn--light" data-goto="buy">Choose your Rain & Rinse</button>
+      </div>
+    </div>
+  </section>
+
+  <div data-slot="faq"></div>
+</main>
+
+<div data-slot="footer"></div>
+</body>
+</html>

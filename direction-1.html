@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rain & Rinse | sproos!</title>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/pdp.css">
+<style>
+  /* Direction 1: Two sides of your shower */
+  .pair { display: grid; gap: 14px; position: relative; }
+  .pair .ph { --ar: 4 / 3; }
+  .pair__and {
+    justify-self: center; width: 64px; height: 64px; border-radius: 50%; margin: -38px 0;
+    background: var(--black); color: var(--violet); display: grid; place-items: center;
+    font-family: var(--f-punch); font-size: 34px; position: relative; z-index: 2;
+  }
+  @media (min-width: 760px) {
+    .pair { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .pair .ph { --ar: 4 / 5; }
+    .pair__and { position: absolute; left: 50%; top: 50%; margin: -32px 0 0 -32px; }
+  }
+  .how { display: grid; gap: 28px; }
+  @media (min-width: 900px) { .how { grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; } }
+  .how__copy { display: grid; gap: 20px; align-content: start; }
+  .how__state { min-height: 92px; }
+  .how__ctrl { display: grid; grid-template-columns: 120px 1fr; gap: 16px; align-items: center; }
+  .up { display: grid; gap: 28px; }
+  @media (min-width: 900px) { .up { grid-template-columns: 1.3fr .7fr; gap: 48px; align-items: end; } }
+  .up__frames { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .up__frames .ph { --ar: 3 / 4; }
+  .up__side { display: grid; gap: 18px; border-top: 1.5px solid var(--black); padding-top: 22px; }
+  .filt { display: grid; gap: 32px; }
+  @media (min-width: 900px) { .filt { grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: center; } }
+  .close { text-align: center; display: grid; gap: 24px; justify-items: center; padding-top: var(--sec); }
+</style>
+<script src="assets/config.js"></script>
+<script src="assets/brand.js"></script>
+<script>
+  window.RR_PAGE = {
+    kicker: ['2 is better', 'than 1.'],
+    gallery: [
+      { shot: 'Lead: complete Rain & Rinse system installed, both heads clearly visible', ar: 'sq' },
+      { shot: 'Person relaxing under the overhead rain', ar: 'sq' },
+      { shot: 'Handheld rinsing sandy feet', ar: 'sq' },
+      { shot: 'Both heads running (Bliss Mode)', ar: 'sq' },
+      { shot: 'Close-up of diverter controls and filter', ar: 'sq' },
+      { shot: 'Full product and included components, laid out', ar: 'sq' }
+    ]
+  };
+</script>
+<script src="assets/pdp.js" defer></script>
+</head>
+<body>
+<div data-slot="header"></div>
+
+<main>
+  <!-- 1. Product and purchase -->
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#">Home</a> / <a href="#">Shower Kits</a> / Rain & Rinse</nav>
+    <div class="pdp" data-slot="pdp"></div>
+  </div>
+
+  <!-- 2. The core contrast -->
+  <section class="sec sec--lilac" aria-labelledby="d1-s2">
+    <div class="wrap">
+      <div class="sec__head sec__head--split">
+        <h2 class="h2" id="d1-s2"><span>For zoning out.</span><span><em>And zeroing in.</em></span></h2>
+        <p class="lede">Stay a little longer under the rain. Take the hand shower straight to sandy toes, soapy legs, and whatever needs a rinse.</p>
+      </div>
+      <div class="pair">
+        <div class="ph ph--neutral" data-shot="Eyes closed under the overhead rain"><span class="ph__tag">Full-body ahhh.</span></div>
+        <span class="pair__and" aria-hidden="true">+</span>
+        <div class="ph ph--neutral" data-shot="Close-up: handheld washing sand from feet"><span class="ph__tag">Right there. All clean.</span></div>
+      </div>
+      <p class="punch" style="font-size:22px;margin-top:28px;text-align:center">Two heads. More ways to make it your shower.</p>
+    </div>
+  </section>
+
+  <!-- 3. How it works -->
+  <section class="sec" aria-labelledby="d1-s3">
+    <div class="wrap how" data-tabs>
+      <div>
+        <div class="ph ph--sq" data-panel="rain" data-shot="Same product angle: overhead rain running, handheld off"></div>
+        <div class="ph ph--sq" data-panel="hand" data-shot="Same product angle: handheld running, overhead off" hidden></div>
+        <div class="ph ph--sq" data-panel="bliss" data-shot="Same product angle: both heads running" hidden></div>
+      </div>
+      <div class="how__copy">
+        <h2 class="h2" id="d1-s3"><span>Your shower.</span><span><em>Your call.</em></span></h2>
+        <p class="lede">Overhead rain, handheld freedom, or both together. Turn the diverter to find your kind of shower.</p>
+        <div class="tabs" role="tablist" aria-label="Shower modes">
+          <button class="tab" role="tab" data-tab="rain">Rain</button>
+          <button class="tab" role="tab" data-tab="hand">Handheld</button>
+          <button class="tab" role="tab" data-tab="bliss">Bliss</button>
+        </div>
+        <div class="how__state" aria-live="polite">
+          <div class="stack" data-panel="rain"><p class="h3">Take your time.</p><p>Full-body coverage for the moments you want to linger.</p></div>
+          <div class="stack" data-panel="hand" hidden><p class="h3">Get right to it.</p><p>Direct the water where you need it, from wash day to rinsing the tub.</p></div>
+          <div class="stack" data-panel="bliss" hidden><p class="h3">Go all in.</p><p>Run the rain shower and hand shower together.</p></div>
+        </div>
+        <div class="modes" aria-hidden="true">
+          <span class="mode-chip" data-mode-on="rain bliss"><i></i>Overhead</span>
+          <span class="mode-chip" data-mode-on="hand bliss"><i></i>Handheld</span>
+        </div>
+        <div class="how__ctrl">
+          <div class="ph ph--sq" data-kind="Detail" data-shot="Diverter control close-up"></div>
+          <p class="small">One diverter. Three ways to shower.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. The achievable upgrade -->
+  <section class="sec sec--yellow" aria-labelledby="d1-s4">
+    <div class="wrap">
+      <div class="sec__head">
+        <h2 class="h2" id="d1-s4"><span>Same bathroom.</span><span><em>Big shower energy.</em></span></h2>
+      </div>
+      <div class="up">
+        <div class="up__frames">
+          <div class="ph ph--neutral" data-shot="Everyday bathroom, basic fixed showerhead. Matched framing and light"><span class="ph__tag">Before</span></div>
+          <div class="ph" data-shot="Same frame, Rain & Rinse installed, person enjoying the rain"><span class="ph__tag">After</span></div>
+        </div>
+        <div class="up__side">
+          <p class="lede">Keep the tile. Change the shower. Bring more color, more flexibility, and a whole new feel to the space you already have.</p>
+          <div class="stack" style="gap:6px">
+            <p class="punch" style="font-size:20px">Make yourself comfortable.</p>
+            <p>Adjust the rain shower’s height and angle, then position the handheld holder to suit your routine.</p>
+          </div>
+          <p><strong>Installation tools included.</strong></p>
+          <button class="tlink" data-goto="faq-fit">See installation and fit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Filtration and close -->
+  <section class="sec sec--maroon on-dark" aria-labelledby="d1-s5">
+    <div class="wrap">
+      <div class="filt">
+        <div class="ph ph--dark ph--45" data-kind="Diagram" data-shot="Product detail showing where the shared filter sits. Use supplied product imagery or an accurate diagram"></div>
+        <div class="stack" style="gap:22px">
+          <h2 class="h2" id="d1-s5"><span>Clean aesthetic.</span><span><em>Clean water.</em></span></h2>
+          <p class="lede">One shared filter serves both heads, so filtration is part of the experience whichever way you shower.</p>
+          <p>Keep the routine going with a replacement filter every <span data-cfg="days">90</span> days. Filter subscriptions are <span data-cfg="filter">$33</span> per replacement.</p>
+          <div class="slot"><b>Proof slot</b>Approved filtration evidence or a genuine Rain & Rinse review goes here.</div>
+        </div>
+      </div>
+      <div class="close">
+        <p class="display"><em>Unbasic</em> your shower.</p>
+        <button class="btn btn--light" data-goto="buy">Choose your Rain & Rinse</button>
+      </div>
+    </div>
+  </section>
+
+  <div data-slot="faq"></div>
+</main>
+
+<div data-slot="footer"></div>
+</body>
+</html>
